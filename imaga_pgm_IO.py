@@ -39,10 +39,10 @@ def readImagePgm(file_name):
     return matrix
 
 def writeImagePgm(m, lx, ly, density, output_file):
-    file = open(output_file, "w")
+    file = open('images/output/'+ output_file, "w")
     file.write("P2")
-    file.write(f'\n{lx}')
-    file.write(f' {ly}')
+    file.write(f'\n{ly}')
+    file.write(f' {lx}')
     file.write(f'\n{density}\n')
     arr = np.matrix(m)
     arr_d = (np.asarray(arr)).flatten()
