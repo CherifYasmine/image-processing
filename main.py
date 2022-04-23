@@ -2,7 +2,7 @@ import numpy as np
 from binary import closing, dilatation, erosion, opening, otsu, thresholding
 
 from contrast_modif import histogram_equalization, linear_transformation, saturated_transformation
-from filters import filer_median, filer_moy, noise, signal_to_Noise_Ratio
+from filters import filer_median, filer_moy, filer_moyS, noise, pad, padS, signal_to_Noise_Ratio
 from imaga_pgm_IO import readImagePgm, writeImagePgm
 '''
     Read/Write testing
@@ -67,9 +67,10 @@ image_with_noise = noise(matrix)
 '''
     Erosion, Dilatation, Opening, Closing
 '''
-binary_image = otsu(matrix)
+# binary_image = otsu(matrix)
 
-writeImagePgm(erosion(matrix=binary_image), ly, lx, 255, 'mona_erosion.pgm')
-writeImagePgm(dilatation(matrix=binary_image), ly, lx, 255, 'mona_dilatation.pgm')
-writeImagePgm(opening(matrix=binary_image), ly, lx, 255, 'mona_opening.pgm')
-writeImagePgm(closing(matrix=binary_image), ly, lx, 255, 'mona_closing.pgm')
+# writeImagePgm(erosion(matrix=binary_image), ly, lx, 255, 'mona_erosion.pgm')
+# writeImagePgm(dilatation(matrix=binary_image), ly, lx, 255, 'mona_dilatation.pgm')
+# writeImagePgm(opening(matrix=binary_image), ly, lx, 255, 'mona_opening.pgm')
+# writeImagePgm(closing(matrix=binary_image), ly, lx, 255, 'mona_closing.pgm')
+
